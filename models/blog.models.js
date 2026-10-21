@@ -1,0 +1,58 @@
+let posts = [
+    {
+        id: 1,
+        title: "Getting Started with Express",
+        content: "Express is a minimal web framework for Node.js. Start with routes.",
+        category: "Technology",
+        tags: ["Node", "Express", "Backend"],
+        createdAt: "2026-10-01T09:00:00Z",
+        updatedAt: "2026-10-01T09:00:00Z",
+    },
+    {
+        id: 2,
+        title: "Why I Switched to Arch Linux",
+        content: "A rolling release distro teaches you how your system really works.",
+        category: "Linux",
+        tags: ["Arch", "Linux", "Productivity"],
+        createdAt: "2026-10-03T14:30:00Z",
+        updatedAt: "2026-10-03T14:30:00Z",
+    },
+    {
+        id: 3,
+        title: "CSS Grid Cheat Sheet",
+        content: "Grid makes two-dimensional layouts simple. Here are the properties I use daily.",
+        category: "Frontend",
+        tags: ["CSS", "Layout", "Frontend"],
+        createdAt: "2026-10-05T11:15:00Z",
+        updatedAt: "2026-10-06T08:00:00Z",
+    },
+    {
+        id: 4,
+        title: "My Study Routine as a CS Student",
+        content: "Short focused sessions beat long unfocused ones. Tech helps only if used right.",
+        category: "Life",
+        tags: ["Study", "Productivity"],
+        createdAt: "2026-10-08T18:45:00Z",
+        updatedAt: "2026-10-08T18:45:00Z",
+    },
+    {
+        id: 5,
+        title: "Understanding Middleware",
+        content: "Middleware runs between the request and the controller. Always call next().",
+        category: "Technology",
+        tags: ["Express", "Middleware", "Backend"],
+        createdAt: "2026-10-12T10:00:00Z",
+        updatedAt: "2026-10-12T10:00:00Z",
+    },
+    {
+        id: 6,
+        title: "React State Explained",
+        content: "State is data that changes over time and triggers a re-render.",
+        category: "Frontend",
+        tags: ["React", "JavaScript", "Frontend"],
+        createdAt: "2026-10-15T16:20:00Z",
+        updatedAt: "2026-10-15T16:20:00Z",
+    },
+];
+
+
