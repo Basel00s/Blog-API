@@ -6,8 +6,8 @@ const app = express();
 
 
 
-
-app.use("/something", router)
+app.use(express.json())
+app.use("/posts", router)
 app.listen(3000,(err)=>{
     if (err) {
         console.log(err)

@@ -1,3 +1,4 @@
+
 let posts = [
     {
         id: 1,
@@ -54,5 +55,74 @@ let posts = [
         updatedAt: "2026-10-15T16:20:00Z",
     },
 ];
+function time() {
+    let theTime = new Date().toISOString()
+    return (theTime)
+}
 
+export function readAll() {
+    return (posts);
+}
+export function getPostbyId(id) {
+    let thePost = posts.filter((x) => x.id == id)
+    if (thePost.length == 0) {
+        return(undefined)
+    }
+    else {
+        return (thePost[0])
+    }
+}
+// let data = {
+//     title: "react",
+//     content: "lorem",
+//     category: "test",
+//     tags: ["react", "something"]
+// }
+export function create(data) {
+    let max = 0;
+    for (const post of posts) {
+        if (post.id > max) {
+            max = post.id;
+        }
+    }
+    let thisid = max + 1;
 
+    let newObject = {
+        id: thisid,
+        title: data.title,
+        content: data.content,
+        category: data.category,
+        tags: data.tags,
+        createdAt: time(),
+        updatedAt: time()
+    }
+    posts.push(newObject)
+    return (newObject)
+}
+export function update(id, data) {
+    for (const post of posts) {
+        if (post.id == id) {
+            post.title = data.title
+            post.content = data.content
+            post.category = data.category
+            post.tags = data.tags
+            post.updatedAt = time()
+            return (post)
+        }
+    }
+}
+export function deletepost(id) {
+    let index = posts.findIndex((p) => p.id == id)
+    if (index != -1) {
+        posts.splice(index, 1)
+        return (true)
+    }
+    else {
+        return (false)
+    }
+}
+export function search(term) {
+    let theWord = term.toLowerCase();
+    let findedBlogs = posts.filter((p) => p.title.toLowerCase().includes(theWord) ||p.category.toLowerCase().includes(theWord)||p.content.toLowerCase().includes(theWord))
+    return (findedBlogs)
+}
